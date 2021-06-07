@@ -1,3 +1,18 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
+<% if @kitten.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= pluralize(@kitten.errors.count, "error") %> prohibited this kitten from being added:</h2>
+    <ul>
+      <% @kitten.errors.each do |error| %>
+        <li><%= error.full_message %></li>
+      <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <h2 class="m-auto w-50 text-center">New Kitten</h2>
 
 <%= render 'form', kitten: @kitten %>

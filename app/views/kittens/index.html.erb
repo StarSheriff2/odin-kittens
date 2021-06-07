@@ -1,17 +1,22 @@
+<% if notice %>
+  <p id="notice"><%= notice %></p>
+<% end %>
+
 <h1>Odin Kittens</h1>
 
 <h2>Kitten Profiles</h2>
 <div class="d-flex">
   <% @kittens.each do |kitten| %>
-    <div class="d-flex flex-column me-5">
-      <h3  class= 'text-center'><%= link_to kitten.name, kitten_path(kitten) %></h3>
-      <ul>
-        <li>Age: <%= kitten.age %></li>
-        <li>Cuteness: <%= kitten.cuteness %></li>
-        <li>Softness: <%= kitten.softness %></li>
-      </ul>
-    </div>
+  <div class="d-flex flex-column me-5">
+    <h3 class='text-center'><%= link_to kitten.name, kitten_path(kitten) %></h3>
+    <ul>
+      <li>Age: <%= kitten.age %></li>
+      <li>Cuteness: <%= kitten.cuteness %></li>
+      <li>Softness: <%= kitten.softness %></li>
+    </ul>
     <br>
+    <%= link_to 'Delete', kitten_path(kitten), method: 'DELETE', class: 'text-center' %>
+  </div>
   <% end %>
 </div>
 

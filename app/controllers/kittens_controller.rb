@@ -15,9 +15,10 @@ class KittensController < ApplicationController
     @kitten = Kitten.new(kitten_params)
 
     if @kitten.save
-      redirect_to root_url
+      redirect_to root_url, notice: 'You have successfully added a new kitten.'
     else
-      render new, notice: 'this request was not successful'
+      flash.now[:notice] = 'Request unsucessful. Please fill the form correctly.'
+      render :new
     end
   end
 
@@ -37,7 +38,7 @@ class KittensController < ApplicationController
   end
 
   def destroy
-    @kitten = kitten.find(params[:id])
+    @kitten = Kitten.find(params[:id])
     @kitten.destroy
     redirect_to root_url, notice: 'Kitten record deleted.'
   end
