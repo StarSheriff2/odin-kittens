@@ -2,4 +2,6 @@
 
 <%= render 'form', kitten: @kitten %>
 
+<%= link_to 'Delete', kitten_path(@kitten), method: 'DELETE', class: 'text-center' %>
+<br>
 <%= link_to 'back', kitten_path %>

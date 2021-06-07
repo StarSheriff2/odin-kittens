@@ -7,4 +7,9 @@
   </ul>
 </div>
 
+<%= link_to 'Delete', kitten_path(@kitten), method: 'DELETE', class: 'text-center' %>
+<br>
 <%= link_to 'edit kitten info', edit_kitten_path %>
+<br>
+
+<%= link_to 'back', kittens_path %>
