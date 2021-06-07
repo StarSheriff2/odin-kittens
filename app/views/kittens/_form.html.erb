@@ -1,0 +1,13 @@
+<%= form_with model: kitten, class: 'd-flex flex-column w-50 m-auto' do |form| %>
+  <%= form.label :name %>
+  <%= form.text_field :name %>
+  <%= form.label :age %>
+  <%= form.number_field :age %>
+  <%= form.label :cuteness %>
+  <%= form.number_field :cuteness %>
+  <%= form.label :softness %>
+  <%= form.number_field :softness %>
+
+  <%= form.submit 'Submit' %>
+
+<% end %>

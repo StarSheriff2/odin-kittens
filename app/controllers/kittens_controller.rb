@@ -21,8 +21,12 @@ class KittensController < ApplicationController
     end
   end
 
+  def edit
+    @kitten = Kitten.find(params[:id])
+  end
+
   def update
-    @kitten = kitten.find(params[:id])
+    @kitten = Kitten.find(params[:id])
     @kitten.update(kitten_params)
 
     if @kitten.save
@@ -39,6 +43,6 @@ class KittensController < ApplicationController
   end
 
   def kitten_params
-    params.require(:user).permit(:name, :age, :cuteness, :softness)
+    params.require(:kitten).permit(:name, :age, :cuteness, :softness)
   end
 end

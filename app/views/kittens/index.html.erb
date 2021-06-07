@@ -1,0 +1,16 @@
+<h1>Odin Kittens</h1>
+
+<h2>Kitten Profiles</h2>
+<div class="d-flex">
+  <% @kittens.each do |kitten| %>
+    <div class="d-flex flex-column">
+      <h3><%= link_to kitten.name, kitten_path(kitten) %></h3>
+      <ul>
+        <li>Age: <%= kitten.age %></li>
+        <li>Cuteness: <%= kitten.cuteness %></li>
+        <li>Softness: <%= kitten.softness %></li>
+      </ul>
+    </div>
+    <br>
+  <% end %>
+</div>
