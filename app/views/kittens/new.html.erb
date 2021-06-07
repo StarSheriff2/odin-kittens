@@ -1,5 +1,7 @@
-<% if notice %>
-  <p id="notice"><%= notice %></p>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
 <% end %>
 
 <% if @kitten.errors.any? %>

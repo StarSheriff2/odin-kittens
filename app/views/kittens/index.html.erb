@@ -1,13 +1,15 @@
-<% if notice %>
-  <p id="notice"><%= notice %></p>
+<% flash.each do |type, msg| %>
+  <div class="alert alert-info">
+    <%= msg %>
+  </div>
 <% end %>
 
-<h1>Odin Kittens</h1>
+<h1 class="text-center">Odin Kittens</h1>
 
-<h2>Kitten Profiles</h2>
-<div class="d-flex">
+<h2 class="text-center">Kitten Profiles</h2>
+<div class="d-flex justify-content-center flex-wrap">
   <% @kittens.each do |kitten| %>
-  <div class="d-flex flex-column me-5">
+  <div class="d-flex flex-column mx-4 card p-3 my-4">
     <h3 class='text-center'><%= link_to kitten.name, kitten_path(kitten) %></h3>
     <ul>
       <li>Age: <%= kitten.age %></li>
@@ -20,4 +22,4 @@
   <% end %>
 </div>
 
-<%= link_to 'Add New Kitten', new_kitten_path %>
+<p class="text-center mt-5"><%= link_to 'Add New Kitten', new_kitten_path %></p>

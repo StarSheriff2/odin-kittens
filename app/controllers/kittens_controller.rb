@@ -17,7 +17,7 @@ class KittensController < ApplicationController
     if @kitten.save
       redirect_to root_url, notice: 'You have successfully added a new kitten.'
     else
-      flash.now[:notice] = 'Request unsucessful. Please fill the form correctly.'
+      flash.now[:alert] = 'Wrong! Please try again. Are you on drugs?'
       render :new
     end
   end
@@ -33,6 +33,7 @@ class KittensController < ApplicationController
     if @kitten.save
       redirect_to @kitten, notice: 'You have successfully updated this kitten\'s info.'
     else
+      flash.now[:alert] = 'Nope. Try again, but this time don\'t mess up!'
       render :edit, status: :unprocessable_entity
     end
   end
