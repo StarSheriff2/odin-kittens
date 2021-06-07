@@ -3,8 +3,8 @@
 <h2>Kitten Profiles</h2>
 <div class="d-flex">
   <% @kittens.each do |kitten| %>
-    <div class="d-flex flex-column">
-      <h3><%= link_to kitten.name, kitten_path(kitten) %></h3>
+    <div class="d-flex flex-column me-5">
+      <h3  class= 'text-center'><%= link_to kitten.name, kitten_path(kitten) %></h3>
       <ul>
         <li>Age: <%= kitten.age %></li>
         <li>Cuteness: <%= kitten.cuteness %></li>
@@ -14,3 +14,5 @@
     <br>
   <% end %>
 </div>
+
+<%= link_to 'Add New Kitten', new_kitten_path %>
