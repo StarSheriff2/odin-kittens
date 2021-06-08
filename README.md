@@ -3,7 +3,7 @@
 >This project is a Rails app meant to be a *'data-producing API'*. It's my first attempt at building a Rails API app.
 
 ## About
-This app should output json data instead of html. The project comes from the [Odin's Project **'Kittens API'**](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/kittens-api).
+This app should output json data and html. The project comes from the [Odin's Project **'Kittens API'**](https://www.theodinproject.com/paths/full-stack-ruby-on-rails/courses/ruby-on-rails/lessons/kittens-api).
 
 ### Live Demo
 
