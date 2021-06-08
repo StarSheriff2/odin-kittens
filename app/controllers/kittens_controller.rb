@@ -4,7 +4,7 @@ class KittensController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @kittens }
+      format.json { render json: @kittens }
     end
   end
 
@@ -13,7 +13,7 @@ class KittensController < ApplicationController
 
     respond_to do |format|
       format.html
-      format.json { render :json => @kitten }
+      format.json { render json: @kitten }
     end
   end
 
