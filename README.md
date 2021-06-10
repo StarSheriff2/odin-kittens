@@ -9,7 +9,7 @@ This app should output json data and html. The project comes from the [Odin's Pr
 
 **Deployed on: Heroku**
 
-[Recipe Buddies app]() ⬅️⬅️ Click Here
+[Odin Kittens](https://immense-plains-91632.herokuapp.com/) ⬅️⬅️ Click Here
 
 ### Features
 - add, edit and delete kitten records
