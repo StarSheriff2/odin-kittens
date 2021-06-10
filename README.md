@@ -7,26 +7,31 @@ This app should output json data and html. The project comes from the [Odin's Pr
 
 ### Live Demo
 
-**Deployed on: **
+**Deployed on: Heroku**
 
 [Recipe Buddies app]() ⬅️⬅️ Click Here
 
 ### Features
-
+- add, edit and delete kitten records
+- get JSON responses
 
 ### Built with
 
 - Ruby 3.0.0p0 (2020-12-25 revision 95aff21468) \[x86_64-darwin15\]
 - Rails 6.1.3.2
 - Sqlite3 '~> 1.4'
+- Rest-client gem
 - Mac OS
 - VS Code
 
-### App Screenshot
+### App Screenshots
 <br>
 
 #### Homepage
-![app_screenshot](./other/README_images/homepage_page.png)
+![app_screenshot](./README_screenshots/homepage_page.png)
+
+#### New Kitten Page
+![app_screenshot](./README_screenshots/new_kitten_page.png)
 
 ## Deployment
 
@@ -61,6 +66,18 @@ This app should output json data and html. The project comes from the [Odin's Pr
 ## Usage
 1. In your terminal, run <code>bin/rails server</code> while inside the root directory of the repository files
 2. Go to your browser of choice and enter this URL: http://localhost:3000/
+3. To get a JSON response from the browser, type any of the following in the URL bar:
+    - `http://localhost:3000/kittens.json`
+    - `http://localhost:3000/kittens/1.json`
+4. To get the JSON response in your terminal, follow these steps:
+    - Open your terminal and go the project's root directory
+    - type `irb` in the terminal prompt to load the **Interactive Ruby Shell** enviroment
+    - copy this into the IRB prompt: `require 'rest-client'`
+    - now type something like this: `response = RestClient.get("http:localhost:3000/kittens", :accept => :json)`, and hit **return**
+    - it should return something like: ***`=> <RestClient::Response 200 "[{\"id\":1,\"n...">`***
+    - now render the response, by typing `response.body`
+    - You should see a lot of output in JSON format!
+    - Follow the same steps to render any kitten page in the same manner, by substituting `http:localhost:3000/kittens` with `http:localhost:3000/kittens/1` or any other number that corresponds to the id of a kitten record
 
 ## Author
 
@@ -77,8 +94,6 @@ Contributions, issues, and feature requests are welcome!
 
 Give an ⭐️ if you like this project!
 
-## Acknowledgments
-
 ## 📝 License
 
-This project is [MIT]() licensed.
+This project is [MIT](https://github.com/StarSheriff2/odin-kittens/blob/development/LICENSE) licensed.
