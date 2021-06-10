@@ -10,15 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_06_07_155219) do
+ActiveRecord::Schema.define(version: 2021_06_10_032302) do
 
   create_table "kittens", force: :cascade do |t|
     t.string "name"
     t.integer "age"
-    t.integer "cuteness"
-    t.integer "softness"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.integer "softness"
+    t.integer "cuteness"
   end
 
 end
